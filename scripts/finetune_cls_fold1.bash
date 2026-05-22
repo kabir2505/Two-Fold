@@ -1,1 +1,1 @@
-torchrun --standalone --nproc_per_node=4 -m src.finetune.cls.main --config configs/finetune_cls_fold1.yaml 
+torchrun --standalone --nproc_per_node=4 -m src.finetune.cls.main --config configs/finetune/finetune_cls_fold1.yaml 

@@ -1,1 +1,1 @@
-torchrun --standalone --nproc_per_node=4 -m src.pretrain.main --config configs/pretrain_btcv.yaml 
+torchrun --standalone --nproc_per_node=4 -m src.pretrain.main --config configs/pretrain/pretrain_btcv.yaml 
