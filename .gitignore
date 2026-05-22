@@ -1,0 +1,17 @@
+tmp/
+src/pretrain/model/heads.py
+src/pretrain/utils/memo.py
+configs/finetune/finetune_amos_2.yaml
+scripts/finetune_amos_2.sh
+src/finetune/seg/tmp/
+
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Vim swap files
+.*.swp
+.*.swo
+.*.swn
+src/finetune/utils/datau_utils_seg.py
+src/finetune/cls/eval.py

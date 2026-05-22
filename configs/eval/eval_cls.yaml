@@ -1,0 +1,19 @@
+distributed: false
+finetune_checkpoint: "/mnt/data/tj/data/2fold_voco_data/outputs/finetune_ccccii_mask_char_fold1/70.pt"
+data_dir: "/mnt/data/tj/data/2fold_voco_data/finetune_data/CC-CCII_public"
+csv_list: "/mnt/data/tj/data/2fold_voco_data/finetune_data/CC-CCII_public/csv"
+fold: 1  # cross-validation fold
+batch_size: 4
+lr: 0.0003
+weight_decay: 0.00001
+epochs: 100
+seed: 42
+in_channels: 1
+num_classes: 3  # out channels
+feature_size: 48
+spatial_dims: 3
+dropout_path_rate: 0.0
+amp: false
+use_checkpoint: true
+
+

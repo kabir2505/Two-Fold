@@ -1,0 +1,43 @@
+seed: 42
+epochs: 500
+batch_size: 4
+workers: 8
+outdir: "/mnt/data/tj/data/2fold_voco_data/outputs/pretrain_16k_mask_char_all_train_p4_m5_rem_rot_mask"
+cache_dir: "/mnt/data/tj/data/2fold_voco_data/data_cache/pretrain_16k_weighted_mask_char_all_train"
+amp: false
+split: "16k"
+data_btcv: "/mnt/data/tj/data/2fold_voco_data/pretrain_data/BTCV"
+data_tcia: "/mnt/data/tj/data/2fold_voco_data/pretrain_data/TCIAcovid19"
+data_luna: "/mnt/data/tj/data/2fold_voco_data/pretrain_data/LUNA"
+lr: 1.0e-3
+weight_decay: 1.0e-2
+patch_grid: 4 
+mask_rate: 0.5
+mask_weight: 5.0
+full_weight:  0.1
+rotations: 9
+in_channels: 1
+num_classes: 1 #out_hannels = fature_size
+feature_size: 48
+lambda_rec: 1.0
+lambda_mask: 0.5
+lambda_rot: 0.2
+roi:  64
+roi_x: 64
+roi_y: 64
+roi_z: 64
+a_min: -175.0
+a_max: 250.0
+b_min: 0.0
+b_max: 1.0
+RandFlipd_prob: 0.2
+RandRotate90d_prob: 0.2
+RandShiftIntensityd_prob: 0.1
+cache_dataset: true
+cache_rate: 0.3
+smartcache_dataset: false
+save_every: 50
+resume_checkpoint: "/mnt/data/tj/data/2fold_voco_data/outputs/pretrain_16k_mask_char_all_train_p4_m5_rem_rot_mask/latest.pt"
+start_epoch: 0
+
+

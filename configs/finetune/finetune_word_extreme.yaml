@@ -1,0 +1,62 @@
+dataset: "word"
+outdir: "/mnt/data/tj/data/2fold_voco_data/outputs/finetune_word_mask_char_all_train_p8_m9"
+data_dir: "/mnt/data/tj/data/2fold_voco_data/finetune_data/WORD"
+cache_dir: "/mnt/data/tj/data/2fold_voco_data/data_cache/WORD"
+json_list: "dataset_voco.json"
+batch_size: 1 #1 in voco
+workers: 16
+lr: 0.0003
+weight_decay: 0.00001
+epochs: 500
+seed: 42
+pretrain_checkpoint: "/mnt/data/tj/data/2fold_voco_data/outputs/pretrain_8k_mask_char_all_train_p8_m9/best.pt"
+in_channels: 1
+num_classes: 17 # out channels
+feature_size: 48
+spatial_dims: 3
+dropout_path_rate: 0.0
+start_epoch: 0  # in case you resume from a checkpoint
+resume_checkpoint: null  # use null instead of None if no checkpoint is used
+amp: true
+val_every: 500
+use_checkpoint: true
+save_every: 50
+space_x: 1.5
+space_y: 1.5
+space_z: 1.5
+a_min: -175.0
+a_max: 250.0
+b_min: 0.0
+b_max: 1.0
+roi_x: 96
+roi_y: 96
+roi_z: 96
+use_normal_dataset: true
+RandFlipd_prob: 0.2
+RandScaleIntensityd_prob: 0.1
+RandShiftIntensityd_prob: 0.1
+RandRotate90d_prob: 0.2
+sw_batch_size: 1
+infer_overlap: 0.75
+test_mode: false
+fold: null
+datafold_read: null
+class_names: [
+    "liver",
+    "spleen",
+    "left_kidney",
+    "right_kidney",
+    "stomach",
+    "gallbladder",
+    "esophagus",
+    "pancreas",
+    "duodenum",
+    "colon",
+    "intestine",
+    "adrenal",
+    "rectum",
+    "bladder",
+    "Head_of_femur_L",
+    "Head_of_femur_R",
+]
+

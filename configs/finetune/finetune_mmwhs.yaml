@@ -1,0 +1,57 @@
+dataset: "mmwhs"
+outdir: "/mnt/data/tj/data/2fold_voco_data/outputs/finetune_mmwhs_full_char_all_train_p4_m5_rem_rot_mask"
+data_dir: "/mnt/data/tj/data/2fold_voco_data/finetune_data/MMWHS"
+cache_dir: "/mnt/data/tj/data/2fold_voco_data/data_cache/MMWHS_2"
+json_list: "dataset_clean.json"
+batch_size: 4
+workers: 8
+lr: 0.0003
+weight_decay: 0.00001
+epochs: 1000
+seed: 42
+pretrain_checkpoint: "/mnt/data/tj/data/2fold_voco_data/outputs/pretrain_16k_mask_char_all_train_p4_m5_rem_rot_mask/best.pt"
+in_channels: 1
+num_classes: 8 # out channels
+feature_size: 48
+spatial_dims: 3
+dropout_path_rate: 0.0
+start_epoch: 0  # in case you resume from a checkpoint
+resume_checkpoint: null # use null instead of None if no checkpoint is used
+amp: false
+val_every: 10
+use_checkpoint: true
+save_every: 50
+space_x: 1.5
+space_y: 1.5
+space_z: 1.5
+a_min: 0.0
+a_max: 1700.0
+b_min: 0.0
+b_max: 1.0
+roi_x: 64
+roi_y: 64
+roi_z: 64 
+use_normal_dataset: true
+RandFlipd_prob: 0.2
+RandScaleIntensityd_prob: 0.1
+RandShiftIntensityd_prob: 0.1
+RandRotate90d_prob: 0.2
+sw_batch_size: 4
+infer_overlap: 0.75
+test_mode: false
+#checkpoint_path:  "/mnt/data/tj/data/2fold_voco_data/outputs/finetune_mmwhs_mask_char_all_train_p4_m7/best.pt"
+class_names: [
+    "Left Ventricle",
+    "whole aorta",
+    "Right Ventricle",
+    "Left Atrium",
+    "myocardium of Left Ventricle",
+    "Right Atrium",
+    "Pulmonary Artery",
+]
+datafold_read: null
+fold: null
+
+rank: 0
+distributed: null
+checkpoint_path: "/mnt/data/tj/data/2fold_voco_data/outputs/finetune_mmwhs_mask_char_all_train_p4_m7/best.pt"

@@ -1,0 +1,50 @@
+dataset: "spleen"
+outdir: "/mnt/data/tj/data/2fold_voco_data/outputs/finetune_spleen_weighted_char_all_train_p4_m7"
+data_dir: "/mnt/data/tj/data/2fold_voco_data/finetune_data/SPLEEN"
+cache_dir: "/mnt/data/tj/data/2fold_voco_data/data_cache/SPLEEN_"
+json_list: "spleen.json"
+batch_size: 2 #1
+workers: 16 
+lr: 0.0003
+weight_decay: 0.00001
+epochs: 2000 #1000
+warmup_epochs: 5
+seed: 42
+pretrain_checkpoint: "/mnt/data/tj/data/2fold_voco_data/outputs/pretrain_16k_full_char_all_train_p4_m7/best.pt"
+in_channels: 1
+num_classes: 2 # out channels
+feature_size: 48
+spatial_dims: 3
+dropout_path_rate: 0.0
+start_epoch: 0  # in case you resume from a checkpoint
+resume_checkpoint: null
+amp: false
+val_every: 10
+use_checkpoint: true
+save_every: 50
+space_x: 1.5
+space_y: 1.5
+space_z: 1.5
+a_min: -175.0
+a_max: 250.0
+b_min: 0.0
+b_max: 1.0
+roi_x: 96
+roi_y: 96
+roi_z: 96 
+use_normal_dataset: true
+RandFlipd_prob: 0.2
+RandScaleIntensityd_prob: 0.1
+RandShiftIntensityd_prob: 0.1
+RandRotate90d_prob: 0.2
+sw_batch_size: 4
+infer_overlap: 0.75
+test_mode: false
+datafold_read: null
+fold: null
+
+
+checkpoint_path: "/mnt/data/tj/data/2fold_voco_data/outputs/finetune_spleen_weighted_char_all_train_p4_m7/best.pt"
+rank: 0
+distributed: null
+class_names: ["spleen"]
