@@ -8,14 +8,14 @@ paradigm for reducing annotation costs in 3D medical imaging, yet many recent ap
 <div align="center">
 
   <figure>
-    <img src="static/2fold_framework.png" alt="The overall pre-training framework" width="500">
+    <img src="static/2fold_framework.png">
     <figcaption>Figure 1: The overall pre-training framework.</figcaption>
   </figure>
 
   <br>
 
   <figure>
-    <img src="static/aug-block.png" alt="Two-fold patchwise perturbation strategy" width="500">
+    <img src="static/aug-block.png">
     <figcaption>Figure 2: Two-fold patchwise perturbation strategy.</figcaption>
   </figure>
 
